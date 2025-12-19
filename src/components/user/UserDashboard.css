@@ -1,0 +1,222 @@
+.user-dashboard {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 80px;
+}
+
+.header {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: auto;
+  height: 70px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.header-text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.sos-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sos-btn {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  border-radius: 50%;
+  color: white;
+  font-size: 36px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+  margin: 30px auto;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  animation: sosGlow 2s ease-in-out infinite;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes sosGlow {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4),
+                0 0 0 0 rgba(231, 76, 60, 0.7);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4),
+                0 0 0 20px rgba(231, 76, 60, 0);
+  }
+}
+
+.sos-btn:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  transform: scale(1.15);
+  box-shadow: 0 15px 40px rgba(231, 76, 60, 0.6);
+}
+
+.sos-btn:active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+}
+
+.address {
+  background: white;
+  padding: 18px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.sos-message {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c0392b;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #fee;
+  padding: 16px;
+  border-radius: 10px;
+  border-left: 4px solid #e74c3c;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.15);
+}
+
+.map-frame {
+  border: 3px solid #3498db;
+  border-radius: 12px;
+  width: 100%;
+  height: 450px;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-img-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 50px;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.personal-info {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info h3 {
+  color: #3498db;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.personal-info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 14px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 10px;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #7f8c8d;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #667eea;
+}
+
+.navbar a i {
+  font-size: 20px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .sos-btn {
+    width: 140px;
+    height: 140px;
+    font-size: 26px;
+  }
+}
