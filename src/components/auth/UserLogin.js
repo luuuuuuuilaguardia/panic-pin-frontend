@@ -49,10 +49,7 @@ const UserLogin = () => {
     <div className="auth-container">
       <div className="auth-box">
         <div className="auth-header">
-          <div className="auth-icon user-bg">
-            <i className="fa fa-user"></i>
-          </div>
-          <h2>User Login</h2>
+          <h2>Log in</h2>
           <p>Access your emergency services</p>
         </div>
 
@@ -60,24 +57,20 @@ const UserLogin = () => {
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
-            <label htmlFor="contact">
-              <i className="fa fa-phone"></i> Contact Number
-            </label>
+            <label htmlFor="contact">Contact number</label>
             <input
               type="text"
               id="contact"
               name="contact"
               value={formData.contact}
               onChange={handleChange}
-              placeholder="Enter your contact number"
+              placeholder="09xxxxxxxxx"
               required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">
-              <i className="fa fa-lock"></i> Password
-            </label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
@@ -90,13 +83,13 @@ const UserLogin = () => {
           </div>
 
           <button type="submit" className="btn-submit">
-            Login
+            Log in
           </button>
         </form>
 
         <div className="auth-footer">
-          <p>Don't have an account? <Link to="/user/register">Register here</Link></p>
-          <Link to="/" className="back-link">← Back to Home</Link>
+          <p>Don't have an account? <Link to="/user/register">Sign up</Link></p>
+          <Link to="/" className="back-link">← Back to home</Link>
         </div>
       </div>
     </div>

@@ -49,10 +49,7 @@ const AuthorityLogin = () => {
     <div className="auth-container">
       <div className="auth-box">
         <div className="auth-header">
-          <div className="auth-icon authority-bg">
-            <i className="fa fa-shield-alt"></i>
-          </div>
-          <h2>Authority Login</h2>
+          <h2>Authority Log in</h2>
           <p>Access emergency monitoring system</p>
         </div>
 
@@ -60,9 +57,7 @@ const AuthorityLogin = () => {
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
-            <label htmlFor="employeeId">
-              <i className="fa fa-id-badge"></i> Employee ID
-            </label>
+            <label htmlFor="employeeId">Employee ID</label>
             <input
               type="text"
               id="employeeId"
@@ -75,9 +70,7 @@ const AuthorityLogin = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">
-              <i className="fa fa-lock"></i> Password
-            </label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
@@ -90,13 +83,13 @@ const AuthorityLogin = () => {
           </div>
 
           <button type="submit" className="btn-submit authority-btn">
-            Login
+            Log in
           </button>
         </form>
 
         <div className="auth-footer">
-          <p>Don't have an account? <Link to="/authority/register">Register here</Link></p>
-          <Link to="/" className="back-link">← Back to Home</Link>
+          <p>Don't have an account? <Link to="/authority/register">Sign up</Link></p>
+          <Link to="/" className="back-link">← Back to home</Link>
         </div>
       </div>
     </div>

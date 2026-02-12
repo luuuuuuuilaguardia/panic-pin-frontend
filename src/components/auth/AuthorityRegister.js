@@ -65,10 +65,7 @@ const AuthorityRegister = () => {
     <div className="auth-container">
       <div className="auth-box">
         <div className="auth-header">
-          <div className="auth-icon authority-bg">
-            <i className="fa fa-user-shield"></i>
-          </div>
-          <h2>Authority Registration</h2>
+          <h2>Authority Sign up</h2>
           <p>Create your authority account</p>
         </div>
 
@@ -76,9 +73,7 @@ const AuthorityRegister = () => {
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
-            <label htmlFor="employeeId">
-              <i className="fa fa-id-badge"></i> Employee ID
-            </label>
+            <label htmlFor="employeeId">Employee ID</label>
             <input
               type="text"
               id="employeeId"
@@ -91,9 +86,7 @@ const AuthorityRegister = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="fullName">
-              <i className="fa fa-id-card"></i> Full Name
-            </label>
+            <label htmlFor="fullName">Full name</label>
             <input
               type="text"
               id="fullName"
@@ -106,43 +99,39 @@ const AuthorityRegister = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">
-              <i className="fa fa-lock"></i> Password
-            </label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder="Enter your password"
+              placeholder="At least 6 characters"
               required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="confirmPassword">
-              <i className="fa fa-lock"></i> Confirm Password
-            </label>
+            <label htmlFor="confirmPassword">Confirm password</label>
             <input
               type="password"
               id="confirmPassword"
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
-              placeholder="Confirm your password"
+              placeholder="Re-enter your password"
               required
             />
           </div>
 
           <button type="submit" className="btn-submit authority-btn">
-            Register
+            Create account
           </button>
         </form>
 
         <div className="auth-footer">
-          <p>Already have an account? <Link to="/authority/login">Login here</Link></p>
-          <Link to="/" className="back-link">← Back to Home</Link>
+          <p>Already have an account? <Link to="/authority/login">Log in</Link></p>
+          <Link to="/" className="back-link">← Back to home</Link>
         </div>
       </div>
     </div>
