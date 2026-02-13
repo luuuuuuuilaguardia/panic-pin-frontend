@@ -65,84 +65,73 @@ const UserRegister = () => {
     <div className="auth-container">
       <div className="auth-box">
         <div className="auth-header">
-          <div className="auth-icon user-bg">
-            <i className="fa fa-user-plus"></i>
-          </div>
-          <h2>User Registration</h2>
-          <p>Create your emergency services account</p>
+          <h2>Create account</h2>
+          <p>Sign up for emergency services</p>
         </div>
 
         {error && <div className="error-message">{error}</div>}
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
-            <label htmlFor="fullName">
-              <i className="fa fa-id-card"></i> Full Name
-            </label>
+            <label htmlFor="fullName">Full name</label>
             <input
               type="text"
               id="fullName"
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              placeholder="Enter your full name"
+              placeholder="Juan Dela Cruz"
               required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="contact">
-              <i className="fa fa-phone"></i> Contact Number
-            </label>
+            <label htmlFor="contact">Contact number</label>
             <input
               type="text"
               id="contact"
               name="contact"
               value={formData.contact}
               onChange={handleChange}
-              placeholder="Enter your contact number"
+              placeholder="09xxxxxxxxx"
               required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">
-              <i className="fa fa-lock"></i> Password
-            </label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder="Enter your password"
+              placeholder="At least 6 characters"
               required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="confirmPassword">
-              <i className="fa fa-lock"></i> Confirm Password
-            </label>
+            <label htmlFor="confirmPassword">Confirm password</label>
             <input
               type="password"
               id="confirmPassword"
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
-              placeholder="Confirm your password"
+              placeholder="Re-enter your password"
               required
             />
           </div>
 
           <button type="submit" className="btn-submit">
-            Register
+            Create account
           </button>
         </form>
 
         <div className="auth-footer">
-          <p>Already have an account? <Link to="/user/login">Login here</Link></p>
-          <Link to="/" className="back-link">← Back to Home</Link>
+          <p>Already have an account? <Link to="/user/login">Log in</Link></p>
+          <Link to="/" className="back-link">← Back to home</Link>
         </div>
       </div>
     </div>
