@@ -130,7 +130,7 @@ const UserRegister = () => {
         </form>
 
         <div className="auth-footer">
-          <p>Already have an account? <Link to="/user/login">Log in</Link></p>
+          <p>Already have an account? <Link to="/user/login">Sign in</Link></p>
           <Link to="/" className="back-link">← Back to home</Link>
         </div>
       </div>

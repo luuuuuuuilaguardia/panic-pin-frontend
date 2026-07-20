@@ -130,7 +130,7 @@ const AuthorityRegister = () => {
         </form>
 
         <div className="auth-footer">
-          <p>Already have an account? <Link to="/authority/login">Log in</Link></p>
+          <p>Already have an account? <Link to="/authority/login">Sign in</Link></p>
           <Link to="/" className="back-link">← Back to home</Link>
         </div>
       </div>

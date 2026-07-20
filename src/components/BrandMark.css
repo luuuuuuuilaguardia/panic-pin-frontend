@@ -1,0 +1,56 @@
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-mark__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: #c92a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark__icon::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.brand-mark__pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(201, 42, 42, 0.25);
+}
+
+.brand-mark__text {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #171717;
+}
+
+.brand-mark--lg .brand-mark__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+
+.brand-mark--lg .brand-mark__icon::after {
+  width: 10px;
+  height: 10px;
+}
+
+.brand-mark--lg .brand-mark__text {
+  font-size: 17px;
+}
