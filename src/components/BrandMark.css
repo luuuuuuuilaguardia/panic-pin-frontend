@@ -9,48 +9,63 @@
 .brand-mark__icon {
   position: relative;
   flex-shrink: 0;
-  width: 26px;
-  height: 26px;
-  border-radius: 7px;
-  background: #c92a2a;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.brand-mark__icon::after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #fff;
+.brand-mark__svg {
+  width: 32px;
+  height: 32px;
 }
 
-.brand-mark__pulse {
-  position: absolute;
-  inset: -4px;
-  border-radius: 10px;
-  border: 1.5px solid rgba(201, 42, 42, 0.25);
+.brand-mark__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
 .brand-mark__text {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
-  color: #171717;
+  color: var(--text-primary);
+  line-height: 1;
 }
 
+.brand-mark__tagline {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* Size: lg */
 .brand-mark--lg .brand-mark__icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
+  width: 38px;
+  height: 38px;
 }
 
-.brand-mark--lg .brand-mark__icon::after {
-  width: 10px;
-  height: 10px;
+.brand-mark--lg .brand-mark__svg {
+  width: 38px;
+  height: 38px;
 }
 
 .brand-mark--lg .brand-mark__text {
   font-size: 17px;
+}
+
+.brand-mark--lg .brand-mark__tagline {
+  font-size: 12px;
+}
+
+/* Tone: light */
+.brand-mark--light .brand-mark__text {
+  color: #f7f7f7;
+}
+
+.brand-mark--light .brand-mark__tagline {
+  color: rgba(247, 247, 247, 0.65);
 }

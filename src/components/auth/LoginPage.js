@@ -60,6 +60,7 @@ const LoginPage = ({ initialRole = 'user' }) => {
   const [formData, setFormData] = useState({ password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const config = ROLES[role];
 
@@ -70,6 +71,7 @@ const LoginPage = ({ initialRole = 'user' }) => {
   useEffect(() => {
     setFormData({ password: '' });
     setError('');
+    setShowPassword(false);
   }, [role]);
 
   const handleRoleChange = (nextRole) => {
@@ -116,8 +118,12 @@ const LoginPage = ({ initialRole = 'user' }) => {
   return (
     <div className="login-page">
       <aside className="login-page__aside">
-        <BrandMark size="lg" />
+        <BrandMark size="lg" tone="light" showTagline />
         <div className="login-page__aside-body">
+          <div className="login-page__aside-decoration" aria-hidden="true">
+            <div className="login-page__aside-circle login-page__aside-circle--1" />
+            <div className="login-page__aside-circle login-page__aside-circle--2" />
+          </div>
           <h1>Emergency response starts here.</h1>
           <p>
             Sign in to send or receive SOS alerts. Your session stays on this
@@ -153,6 +159,11 @@ const LoginPage = ({ initialRole = 'user' }) => {
 
           {error && (
             <div className="login-page__error" role="alert">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="15" y1="9" x2="9" y2="15"/>
+                <line x1="9" y1="9" x2="15" y2="15"/>
+              </svg>
               {error}
             </div>
           )}
@@ -170,22 +181,46 @@ const LoginPage = ({ initialRole = 'user' }) => {
                   placeholder={field.placeholder}
                   autoComplete={field.autoComplete}
                   required
+                  disabled={loading}
                 />
               </div>
             ))}
 
             <div className="login-page__field">
               <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                placeholder="Your password"
-                autoComplete="current-password"
-                required
-              />
+              <div className="login-page__password-wrap">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  id="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder="Your password"
+                  autoComplete="current-password"
+                  required
+                  disabled={loading}
+                />
+                <button
+                  type="button"
+                  className="login-page__eye"
+                  onClick={() => setShowPassword(!showPassword)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  tabIndex={-1}
+                >
+                  {showPassword ? (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                      <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                      <line x1="1" y1="1" x2="23" y2="23"/>
+                    </svg>
+                  ) : (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                  )}
+                </button>
+              </div>
             </div>
 
             <button
@@ -193,7 +228,11 @@ const LoginPage = ({ initialRole = 'user' }) => {
               className={`login-page__submit${role === 'authority' ? ' login-page__submit--authority' : ''}`}
               disabled={loading}
             >
-              {loading ? 'Signing in…' : 'Sign in'}
+              {loading ? (
+                <span className="login-page__spinner" />
+              ) : (
+                'Sign in'
+              )}
             </button>
           </form>
 

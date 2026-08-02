@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="pinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a59"/>
+      <stop offset="100%" stop-color="#ef233c"/>
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a59" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ef233c" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <!-- Signal waves -->
+  <path d="M16.5 18.5a18 18 0 0 1 6.2-6.2" stroke="url(#waveGrad)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M12 22a24 24 0 0 1 10-10" stroke="url(#waveGrad)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <path d="M47.5 18.5a18 18 0 0 0-6.2-6.2" stroke="url(#waveGrad)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M52 22a24 24 0 0 0-10-10" stroke="url(#waveGrad)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <!-- Pin body -->
+  <path d="M32 6C23.2 6 16 13.2 16 22c0 10.5 14.4 30.8 15.6 32.4a.5.5 0 0 0 .8 0C33.6 52.8 48 32.5 48 22 48 13.2 40.8 6 32 6Z" fill="url(#pinGrad)"/>
+  <!-- Inner circle -->
+  <circle cx="32" cy="21" r="7" fill="#fff" opacity="0.95"/>
+  <!-- Center dot -->
+  <circle cx="32" cy="21" r="2.5" fill="url(#pinGrad)" opacity="0.9"/>
+</svg>
